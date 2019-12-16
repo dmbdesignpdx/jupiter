@@ -1,0 +1,28 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import Button from './Button';
+
+<Meta title="Library|Button" component={Button} />
+
+# Button
+
+## Primary
+
+Primary button is the default.
+
+<Preview>
+<Story name="Primary">
+  <Button />
+</Story>
+</Preview>
+
+## Secondary
+
+To create a 'Secondary' button, add `theme="secondary"`.
+
+<Preview>
+<Story name="Secondary">
+  <Button theme="secondary" />
+</Story>
+</Preview>
+
+<Props of={Button} />

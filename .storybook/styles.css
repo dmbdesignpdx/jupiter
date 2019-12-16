@@ -1,0 +1,9 @@
+body.sb-show-main {
+  background: none;
+}
+
+#root {
+  display: grid;
+  height: 100vh;
+  place-items: center;
+}

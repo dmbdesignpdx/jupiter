@@ -1,0 +1,185 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul,
+dl,
+menu,
+dd,
+hr,
+pre,
+button,
+input,
+select,
+textarea,
+fieldset,
+legend,
+figure,
+blockquote,
+iframe,
+dialog,
+table,
+th,
+td,
+tbody,
+tr,
+tfoot,
+thead,
+colgroup {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+input,
+select,
+progress,
+meter {
+  -moz-appearance: none;  /* Firefox */
+  -webkit-appearance: none;  /* Chrome, Safari */
+  appearance: none;  /* Edge, possibly future? */
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+/* 
+ * Important!
+ * If you plan to keep the above ruleset of ol and/or ul, then the ruleset 
+ * below is needed for VoiceOver in Safari. Otherwise VoiceOver will not 
+ * register the list as a list.
+ */
+li::before {
+  content: '\200B';
+  /* Uncomment if some lists will have list-style */
+  /*
+  position: absolute;
+   */
+}
+
+a,
+abbr {
+  text-decoration: none;
+}
+
+dfn,
+address {
+  font-style: normal;
+}
+
+
+/*
+ * 4. Normalizations
+ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font: 400 1.125em Roboto, sans-serif
+  /* Uncomment if you plan on using emoji's */
+  /*
+    'Apple Color Emoji', 'Segoe UI Emoji'
+   */;
+}
+
+body {
+  -ms-text-size-adjust: 100%;  /* Edge, IE Mobile */
+  -moz-text-size-adjust: 100%;  /* Firefox Android */
+  -webkit-text-size-adjust: 100%;  /* iOS Safari 5+ */
+  text-size-adjust: 100%;
+  -ms-touch-action: manipulation;  /* IE 10 */
+  touch-action: manipulation;
+  -webkit-overflow-scrolling: touch;
+  -moz-osx-font-smoothing: grayscale;  /* Firefox Mac OS */
+  -webkit-font-smoothing: antialiased; /* Chrome, Safari Mac OS */
+  -webkit-tap-highlight-color: transparent;
+  -ms-overflow-style: -ms-autohiding-scrollbar; /* Mimic Mac OS for Windows */
+}
+
+input,
+select,
+button,
+textarea {
+  font: inherit;
+}
+
+main, /* IE 10 */
+details, /* IE, Edge */
+video,
+img,
+object,
+svg,
+iframe,
+embed {
+  display: block;
+}
+
+summary {
+  display: list-item; /* 'block' breaks in Firefox */
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  background: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a,
+select,
+button,
+[role=button] {
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.2;
+  text-rendering: geometricPrecision;
+}
+
+p {
+  letter-spacing: 0.01em;
+  line-height: 1.5;
+  -ms-hyphens: none;  /* IE 10+, Edge */
+  -moz-hyphens: none;  /* Firefox < 45 */
+  -webkit-hyphens: none;  /* Safari 5+ */
+  hyphens: none;
+  /* Note: a 'lang' attr has to be defined in the <html> to use hyphens */
+}
+
+
+
+/* LIBRAY STYLES */
+
+h1,
+h2 {
+  font-family: 'Major Mono Display', monospace;
+}
+
+button,
+h3,
+h4 {
+  font-family: Menlo, monospace;
+}
