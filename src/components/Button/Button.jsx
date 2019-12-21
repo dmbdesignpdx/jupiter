@@ -1,6 +1,9 @@
 import React from 'react'
 import { string } from 'prop-types'
 import styled from 'styled-components'
+import { oneOf } from 'prop-types'
+
+import { COLORS } from '../../styles/variables'
 
 
 /**
@@ -14,7 +17,7 @@ const Component = styled.button`
   &:focus {
 
     span {
-      box-shadow: 9px 9px 0 #000;
+      box-shadow: 9px 9px 0 ${COLORS.black};
       transform: translate(-3px, -3px);
   }
   } 
@@ -22,7 +25,7 @@ const Component = styled.button`
   &:active {
 
     span {
-      box-shadow: 3px 3px 0 #000;
+      box-shadow: 3px 3px 0 ${COLORS.black};
       transform: translate(-1px, -1px);
       transition: 0s;
     }
@@ -34,8 +37,8 @@ const Text = styled.span`
   padding: 0.5em 1em;
   font-size: 0.8rem;
   font-weight: 700;
-  background: ${props => props.theme === `secondary` ? `#FA0` : `#1FC`};
-  box-shadow: 3px 3px 0 #000;
+  background: ${props => COLORS[props.theme]};
+  box-shadow: 3px 3px 0 ${COLORS.black};
   transition: 0.2s;
   backface-visibility: hidden;
 `
@@ -56,12 +59,18 @@ const Button = ({ theme, children, ...attrs }) => (
 )
 
 Button.propTypes = {
-  theme: string,
+  /**
+   * Choose a theme.
+   */
+  theme: oneOf([`primary`, `secondary`]),
+  /**
+   * The displayed text.
+   */
   children: string,
 }
 
 Button.defaultProps = {
-  theme: ``,
+  theme: `primary`,
   children: `Learn More`,
 }
 

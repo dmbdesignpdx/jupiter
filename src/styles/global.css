@@ -170,6 +170,14 @@ p {
 }
 
 
+.graphical span {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  overflow: hidden;
+}
+
+
 
 /* LIBRAY STYLES */
 

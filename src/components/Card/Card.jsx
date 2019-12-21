@@ -2,6 +2,10 @@ import React from 'react'
 import { string } from 'prop-types'
 import styled from 'styled-components'
 
+import { COLORS } from '../../styles/variables'
+
+const { grey, blue, black } = COLORS
+
 
 /**
  * Styles
@@ -10,15 +14,15 @@ import styled from 'styled-components'
 const Component = styled.article`
   max-width: 420px;
   padding: 30px;
-  background: #EEE;
-  border: 2px solid #000;
+  background: ${grey};
+  border: 2px solid ${black};
   position: relative;
 
   &::before {
     display: block;
     width: 100%;
     height: 100%;
-    background: #0AC;
+    background: ${blue};
     position: absolute;
     top: 12px;
     left: -12px;
@@ -53,7 +57,7 @@ const Wrapper = styled.a`
     }
 
     p span {
-      color: #0AC;
+      color: ${blue};
     }
   }
 
@@ -98,7 +102,13 @@ const Card = ({ title, copy, ...attrs }) => {
 }
 
 Card.propTypes = {
+  /**
+   * The title of the card.
+   */
   title: string.isRequired,
+  /**
+   * The content of the card.
+   */
   copy: string.isRequired,
 }
 

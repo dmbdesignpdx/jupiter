@@ -1,13 +1,13 @@
 {
   "name": "jupiter-library",
   "version": "1.0.0",
-  "description": "a ui component library (react)",
+  "description": "A GUI component library (react)",
   "author": "Daniel Blake",
   "license": "MIT",
   "private": true,
   "scripts": {
     "start": "start-storybook --ci",
-    "build": "build-storybook"
+    "build": "build-storybook -s public --docs"
   },
   "browserslist": [
     "since 2016"
@@ -23,6 +23,7 @@
     "@storybook/addon-backgrounds": "^5.2.8",
     "@storybook/addon-console": "^1.2.1",
     "@storybook/addon-docs": "^5.2.8",
+    "@storybook/addon-knobs": "^5.2.8",
     "@storybook/addon-links": "^5.2.8",
     "@storybook/react": "^5.2.8",
     "babel-loader": "^8.0.6",

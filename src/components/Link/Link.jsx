@@ -2,6 +2,8 @@ import React from 'react'
 import { string } from 'prop-types'
 import styled from 'styled-components'
 
+import { COLORS } from '../../styles/variables'
+
 
 /**
  * Styles
@@ -21,7 +23,7 @@ const Component = styled.a`
     height: 100%;
     position: absolute;
     z-index: -1;
-    background: #1FC;
+    background: ${COLORS.primary};
     content: '';
     transition: 0.2s;
     transform: translateX(0) scaleX(0);
@@ -54,6 +56,9 @@ const Link = ({ children, ...attrs }) => (
 )
 
 Link.propTypes = {
+  /**
+   * The displayed text.
+   */
   children: string,
 }
 

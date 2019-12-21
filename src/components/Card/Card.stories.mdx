@@ -2,7 +2,7 @@ import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
 import Card from './Card';
 import data from '../../data';
 
-<Meta title="Library|Card" component={Card} />
+<Meta title="Jupiter|Card" component={Card} />
 
 # Card
 
@@ -11,12 +11,12 @@ import data from '../../data';
 Primary Card is the default.
 
 <Preview>
-<Story name="Primary">
-  <Card
-    title="Mars Base, Alpha I"
-    copy={data.copy}
-  />
-</Story>
+  <Story name="Primary">
+    <Card
+      title="Mars Base, Alpha I"
+      copy={data.copy}
+    />
+  </Story>
 </Preview>
 
 ## as Link
@@ -24,13 +24,13 @@ Primary Card is the default.
 Add an `href` to turn into a link.
 
 <Preview>
-<Story name="as Link">
-  <Card
-    title="Moon Base, Delta VI"
-    copy={data.copy}
-    href={data.href}
-  />
-</Story>
+  <Story name="as Link">
+    <Card
+      title="Moon Base, Delta VI"
+      copy={data.copy}
+      href={data.href}
+    />
+  </Story>
 </Preview>
 
 <Props of={Card} />

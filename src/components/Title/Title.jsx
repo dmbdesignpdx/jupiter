@@ -23,6 +23,9 @@ const Title = ({ children }) => (
 
 
 Title.propTypes = {
+  /**
+   * The displayed text.
+   */
   children: string.isRequired,
 }
 
