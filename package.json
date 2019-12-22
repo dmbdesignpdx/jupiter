@@ -7,7 +7,7 @@
   "private": true,
   "scripts": {
     "start": "start-storybook --ci",
-    "build": "build-storybook -s public --docs"
+    "build": "build-storybook --docs"
   },
   "browserslist": [
     "since 2016"

@@ -4,7 +4,7 @@ import styled from 'styled-components'
 
 import { COLORS } from '../../styles/variables'
 
-const { grey, blue, black } = COLORS
+const { grey, blue, white, black, offwhite } = COLORS
 
 
 /**
@@ -14,20 +14,20 @@ const { grey, blue, black } = COLORS
 const Component = styled.article`
   max-width: 420px;
   padding: 30px;
-  background: ${grey};
-  border: 2px solid ${black};
   position: relative;
+  border: 2px solid ${black};
+  background: ${offwhite};
 
   &::before {
     display: block;
     width: 100%;
     height: 100%;
-    background: ${blue};
     position: absolute;
     top: 12px;
-    left: -12px;
+    left: 12px;
     z-index: -1;
     content: '';
+    background: ${black};
   }
 
   p {
@@ -46,14 +46,13 @@ const Wrapper = styled.a`
 
   article::before {
     transition: 0.2s;
-    opacity: 0.7;
   }
 
   &:hover,
   &:focus {
 
     article::before {
-      transform: translate(24px, -24px);
+      transform: translate(12px, 12px);
     }
 
     p span {

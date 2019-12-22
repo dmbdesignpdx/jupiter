@@ -6,16 +6,22 @@ import { COLORS } from '../../styles/variables'
 
 
 const Component = styled.aside`
-  padding: 15px;
-  background: ${COLORS.grey};
+  display: flex;
+  width: calc(100% - 40px);
+  max-width: 420px;
+  padding: 4px 4px 4px 16px;
+  margin: 0 auto;
+  align-items: center;
   border: 2px solid ${COLORS.black};
+  background: ${COLORS.primary};
+  justify-content: space-between;
 
   button {
 
     svg {
       width: 48px;
       height: 48px;
-      padding: 10px;
+      padding: 12px;
       stroke: #000;
       stroke-width: 2;
       fill: none;
@@ -37,7 +43,7 @@ const Snackbar = ({ children }) => {
 
     <Component>
       
-      {children}
+      <p>{children}</p>
 
       <button
         className="graphical"

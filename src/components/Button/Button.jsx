@@ -5,6 +5,8 @@ import { oneOf } from 'prop-types'
 
 import { COLORS } from '../../styles/variables'
 
+const { black } = COLORS
+
 
 /**
  * Styles
@@ -12,21 +14,24 @@ import { COLORS } from '../../styles/variables'
 
 const Component = styled.button`
   padding: 0.3em 0;
+  transition: transform 0.2s;
+  transform-style: preserve-3d;
 
   &:hover,
   &:focus {
+    transform: translate(-3px, -3px);
 
-    span {
-      box-shadow: 9px 9px 0 ${COLORS.black};
-      transform: translate(-3px, -3px);
-  }
+    span::before {
+      transform: translate(6px, 6px);
+    }
   } 
 
   &:active {
+    transform: translate(-1px, -1px);
+    transition: 0s;
 
-    span {
-      box-shadow: 3px 3px 0 ${COLORS.black};
-      transform: translate(-1px, -1px);
+    span::before {
+      transform: translate(1px, 1px);
       transition: 0s;
     }
   }
@@ -34,13 +39,25 @@ const Component = styled.button`
 
 const Text = styled.span`
   display: block;
-  padding: 0.5em 1em;
-  font-size: 0.8rem;
+  padding: 0.6em 1em;
+  position: relative;
+  font-size: 0.9rem;
   font-weight: 700;
   background: ${props => COLORS[props.theme]};
-  box-shadow: 3px 3px 0 ${COLORS.black};
-  transition: 0.2s;
-  backface-visibility: hidden;
+
+  &::before {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    z-index: -1;
+    content: '';
+    background: ${black};
+    transition: transform 0.2s;
+    backface-visibility: hidden;
+  }
 `
 
 
