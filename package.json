@@ -6,7 +6,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "start": "start-storybook --ci",
+    "start": "start-storybook",
     "build": "build-storybook --docs"
   },
   "browserslist": [

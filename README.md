@@ -1,4 +1,4 @@
-# Jupiter - UI Library
+# Jupiter - Design System
 
 By Daniel Blake
 
@@ -6,9 +6,10 @@ By Daniel Blake
 
 ### Using Storybook
 
-#### Includes:
+#### Includes (so far):
 
 - Button
-- Link
 - Card
+- Link
+- Snackbar
 - Title

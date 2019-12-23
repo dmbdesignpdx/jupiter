@@ -1,4 +1,5 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import { withKnobs, select, text } from '@storybook/addon-knobs';
 import Button from './Button';
 
 <Meta title="Jupiter|Button" component={Button} />
@@ -25,4 +26,15 @@ To create a 'Secondary' button, add `theme="secondary"`.
   </Story>
 </Preview>
 
+## Props
+
 <Props of={Button} />
+
+## Playground
+
+Use the "canvas" tab to try different prop values.
+
+<Story name="Playground" parameters={{ decorators: [withKnobs] }}>
+  <Button theme={select(`Theme`, [`primary`, `secondary`])} children={text(`Text`, `Learn More`)} />
+  
+</Story>
