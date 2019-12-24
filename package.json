@@ -1,6 +1,6 @@
 {
   "name": "jupiter-library",
-  "version": "1.0.0",
+  "version": "0.0.2",
   "description": "A GUI component library (react)",
   "author": "Daniel Blake",
   "license": "MIT",
@@ -19,6 +19,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.7.5",
+    "@storybook/addon-a11y": "^5.2.8",
     "@storybook/addon-actions": "^5.2.8",
     "@storybook/addon-backgrounds": "^5.2.8",
     "@storybook/addon-console": "^1.2.1",

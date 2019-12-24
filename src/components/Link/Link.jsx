@@ -10,6 +10,7 @@ import { COLORS } from '../../styles/variables'
  */
 
 const Component = styled.a`
+  /* display: block; */
   position: relative;
   font-family: Menlo, monospace;
   font-size: 0.9rem;

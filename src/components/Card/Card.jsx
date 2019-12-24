@@ -3,8 +3,9 @@ import { string } from 'prop-types'
 import styled from 'styled-components'
 
 import { COLORS } from '../../styles/variables'
+import Link from '../Link/Link'
 
-const { grey, blue, white, black, offwhite } = COLORS
+const { black, offwhite } = COLORS
 
 
 /**
@@ -32,36 +33,17 @@ const Component = styled.article`
 
   p {
     margin-top: 1em;
-  }
-`
 
-const Wrapper = styled.a`
-
-  p span {
-    display: block;
-    font-weight: 700;
-    font-size: 0.8em;
-    margin-top: 1em;
-  }
-
-  article::before {
-    transition: 0.2s;
-  }
-
-  &:hover,
-  &:focus {
-
-    article::before {
-      transform: translate(12px, 12px);
-    }
-
-    p span {
-      color: ${blue};
-    }
-  }
-
-  &:active {
-    transform: scale(0.96);
+    ${({ isLink }) => isLink && `
+      display: flex;
+      flex-direction: column;
+      
+      a {
+        margin-top: 1em;
+        align-self: flex-start;
+        z-index: 1;
+      }
+    `}
   }
 `
 
@@ -71,32 +53,18 @@ const Wrapper = styled.a`
  */
 
 const Card = ({ title, copy, ...attrs }) => {
-  if (!('href' in attrs)) return (
-
-  <Component>
-
-      <h3>{title}</h3>
-
-      <p>{copy}</p>
-
-    </Component>
-
-  )
+  const isLink = `href` in attrs
 
   return (
 
-    <Wrapper {...attrs}>
-
-      <Component>
+    <Component isLink>
   
-        <h3>{title}</h3>
+      <h3>{title}</h3>
   
-        <p>{copy} <span>Learn More</span></p>
+      <p>{copy} {isLink && <Link {...attrs} />}</p>
   
-      </Component>
-
-    </Wrapper>
-
+    </Component>
+  
   )
 }
 
