@@ -39,7 +39,7 @@ const Snackbar = ({ children }) => {
   const close = () => setShowing(false)
   
   if (!showing) return null
-  else return (
+  return (
 
     <Component>
       

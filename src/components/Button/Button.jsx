@@ -1,7 +1,6 @@
 import React from 'react'
-import { string } from 'prop-types'
+import { string, oneOf } from 'prop-types'
 import styled from 'styled-components'
-import { oneOf } from 'prop-types'
 
 import { COLORS } from '../../styles/variables'
 

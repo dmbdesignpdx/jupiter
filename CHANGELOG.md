@@ -8,3 +8,7 @@
 
 - adds a11y
 - changes card with link
+
+## Version 0.0.3
+
+- adds banner

@@ -1,0 +1,29 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import { withKnobs, text } from '@storybook/addon-knobs';
+import Banner from './Banner';
+
+<Meta title="Jupiter|Banner" component={Banner} />
+
+# Banner
+
+Default.
+
+<Preview>
+  <Story name="Default">
+    <Banner>This is what a banner looks like.</Banner>
+  </Story>
+</Preview>
+
+# Props
+
+<Props of={Banner} />
+
+# Playground
+
+Use the "canvas" tab to try different prop values.
+
+<Story name="Playground" parameters={{ decorators: [withKnobs] }}>
+  <Banner
+    children={text(`Text`, `You can edit this text.`)}
+  />
+</Story>

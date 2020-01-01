@@ -35,6 +35,8 @@ Used with primary for lesser priority CTA.
 Use the "canvas" tab to try different prop values.
 
 <Story name="Playground" parameters={{ decorators: [withKnobs] }}>
-  <Button theme={select(`Theme`, [`primary`, `secondary`])} children={text(`Text`, `Learn More`)} />
-  
+  <Button
+    theme={select(`Theme`, [`primary`, `secondary`])}
+    children={text(`Text`, `Learn More`)}
+  />
 </Story>
