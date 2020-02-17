@@ -5,7 +5,11 @@ import styled from 'styled-components'
 import { COLORS } from '../../styles/variables'
 import Link from '../Link/Link'
 
-const { black, offwhite } = COLORS
+const {
+  black,
+  offwhite,
+  primary,
+} = COLORS
 
 
 /**
@@ -28,7 +32,7 @@ const Component = styled.article`
     left: 12px;
     z-index: -1;
     content: '';
-    background: ${black};
+    background: ${primary};
   }
 
   p {
